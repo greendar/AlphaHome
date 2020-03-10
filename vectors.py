@@ -6,6 +6,9 @@ class Vector:
     def show(self):
         print(f"[{self.vx}, {self.vy}]")
 
+    def mag(self):
+        return (self.vx**2 + self.vy**2)**0.5
+
 
 """
 a = Vector(3, 4)
