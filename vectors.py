@@ -7,7 +7,7 @@ def cross(aVec, bVec):
     cZ = aVec.vx * bVec.vy - aVec.vy - bVec.vx
     c = Vector(cX, cY, cZ)
     return c
-    
+
 class Vector:
     def __init__(self, vx, vy, vz = 0):
         self.vx = vx
@@ -16,9 +16,9 @@ class Vector:
 
     def __str__(self):
         if self.vz == 0:
-            print(f"[{self.vx}, {self.vy}]")
+            return f"[{self.vx}, {self.vy}]"
         else:
-            print(f"[{self.vx}, {self.vy}, {self.vz}]")
+            return f"[{self.vx}, {self.vy}, {self.vz}]"
 
     def mag(self):
         return (self.vx**2 + self.vy**2 +self.vz**2)**0.5
