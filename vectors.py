@@ -27,6 +27,22 @@ class Vector:
         c = Vector(cX, cY, cZ)
         return c
 
-
     def mag(self):
         return (self.vx**2 + self.vy**2 +self.vz**2)**0.5
+
+class Line:
+    def __init__(self, posVec, dirVec):
+        self.posVec = posVec
+        self.dirVec = dirVec
+
+    def __str__(self):
+        return f"R = {self.posVec} + t * {self.dirVec}"
+
+class Plane:
+    def __init__(self, posVec, dirVec1, dirVec2):
+        self.posVec = posVec
+        self.dirVec1 = dirVec1
+        self.dirVec2 = dirVec2
+
+    def __str__(self):
+        return f"R = {self.posVec} + s * {self.dirVec1} + t * {self.dirVec2}"
