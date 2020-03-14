@@ -8,6 +8,22 @@ def cross(aVec, bVec):
     c = Vector(cX, cY, cZ)
     return c
 
+def distLineToLine(aLine, bLine):
+    if linesIntersect(aLine, bLine):
+        return 0
+    else:
+        newVec = Vector(aLine.vx - bLine.vx, aLine.vy - bLine.vy, aLine.vz - bLine.vz)
+        dot(aVec, newVec) # work this out on paper first
+    pass # return float
+
+def linesIntersect(aLine, bLine):
+    pass # return True or False
+
+def planeNormalVector(aPlane):
+    normalVector = cross(aPlane.dirVec1, aPlane.dirVec2)
+    return normalVector
+
+
 class Vector:
     def __init__(self, vx, vy, vz = 0):
         self.vx = vx
